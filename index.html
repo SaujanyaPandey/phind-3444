@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0e7d6; /* Pastel yellow */
+        }
+
+        header {
+            background-color: #ffecb3; /* Pastel orange */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            margin: 0 10px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #ffecb3;
+            color: #333;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #ffcc66; /* Slightly darker shade */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #ffecb3;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="homeBtn">Home</button>
+            <button id="menuBtn">Menu</button>
+            <button id="contactBtn">Contact</button>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <!-- Home section content -->
+        </section>
+        <section id="menu">
+            <!-- Menu section content -->
+        </section>
+        <section id="contact">
+            <!-- Contact section content -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bakery. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            document.getElementById('home').style.display = 'block';
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+        });
+
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('menu').style.display = 'block';
+            document.getElementById('contact').style.display = 'none';
+        });
+
+        document.getElementById('contactBtn').addEventListener('click', function() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('contact').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
